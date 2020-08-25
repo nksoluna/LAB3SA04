@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     },
 
     wbackground : {     
-       backgroundColor : 'blue' ,
+       backgroundColor : '#eda334' ,
        alignItems : 'stretch' ,
        flexDirection : 'row' ,
        textAlign : 'center' ,

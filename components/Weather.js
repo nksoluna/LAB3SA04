@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react' 
-import { Text , View , ImageBackground , StyleSheet} from 'react-native' 
+import { Text , View , ImageBackground , StyleSheet ,Button, Linking} from 'react-native' 
 import Forecast from './Forecast'
 
 export default function Weather(props) {
@@ -38,6 +38,13 @@ export default function Weather(props) {
         
         <Forecast {...forecastInfo} />
         
+        <View>
+
+        <Button  style={styles.Button} title = "openweathermap" onPress={() => Linking.openURL("https://openweathermap.org/api")}></Button>
+        </View>
+        
+       
+
         </ImageBackground>
         
         </View>
@@ -52,19 +59,34 @@ export default function Weather(props) {
             
             
         width: '100%',
-        height: '100%'
+        height: '100%',
+        
         },
         wbackground : {
              flex : 0.15 ,
-            backgroundColor : 'blue' ,
+            backgroundColor : '#eda334' ,
             alignItems : 'stretch' ,
             flexDirection : 'row' ,
             textAlign : 'center' ,
-            fontSize :30 ,
+            fontSize :25 ,
             color : 'white' ,
             textAlignVertical : 'center' ,
             opacity : 0.75 ,
             
         } ,
+
+        background : {
+            top: 30,
+            flex : 0.15 ,
+           backgroundColor : '#e80c0c' ,
+           alignItems : 'stretch' ,
+           flexDirection : 'row' ,
+           textAlign : 'center' ,
+           fontSize :25 ,
+           color : 'white' ,
+           textAlignVertical : 'center' ,
+           opacity : 0.75 ,
+           
+       } ,
        });
        
