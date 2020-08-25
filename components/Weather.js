@@ -6,7 +6,7 @@ export default function Weather(props) {
     const  [ forecastInfo , setForecastInfo ] = useState({
     main: 'main',
     description: 'description',
-    temp: 0
+    temp : 0
     })
     useEffect(() => {
         console.log(`fetching data with zipCode = ${props.zipCode}`)
@@ -18,7 +18,10 @@ export default function Weather(props) {
         main: json.weather[0].main,
         description: json.weather[0].description,
         temp: json.main.temp,
-        name:json.name
+        name:json.name ,
+        pressure:json.main.pressure ,
+        humidity:json.main.humidity ,
+        timezone:json.timezone 
         });
         })
         .catch((error) => {
