@@ -12,20 +12,20 @@ const availableZipItems = [
     { place: 'Chonburi', code: '20240' , pic: require("../image/chonburi.jpg") },
     { place: 'Singburi', code: '16130' , pic: require("../image/singburi.jpg") },
     { place: 'Yala', code: '95000' ,pic: require("../image/yala.jpg") },
-    { place: 'UbonRatchathani', code: '20000',pic: require("../image/ubon.jpg") },
+    { place: 'UbonRatchathani', code: '34160',pic: require("../image/ubon.jpg") },
    ]
    const ZipItem = ({place, code, navigation , pic}) => (
     <TouchableHighlight onPress={() => navigation.navigate("Weather", { zipCode: code })}
 >
     <View style={styles.layout}>
       <ImageBackground source={pic} style={styles.backdrop}></ImageBackground>
-      <Text style={{ textAlign: "center", backgroundColor: "#FFE099" }}>
+      <Text style={{ textAlign: "center"}}>
         {place}
       </Text>
-      <Text style={{ textAlign: "center", backgroundColor: "#FFEABC" }}>
+      <Text style={{ textAlign: "center" }}>
         {code}
       </Text>
-      <Text style={{ backgroundColor: "#FFF6E1" }}>{"\n"}</Text>
+      <Text style={{ backgroundColor: "#FFFFFF" }}>{"\n"}</Text>
     </View>
   </TouchableHighlight>
 );
@@ -56,17 +56,26 @@ const availableZipItems = [
     width: '100%',
     height: '100%'
     },
-    wbackground : {
-         flex : 0.15 ,
-        backgroundColor : 'blue' ,
-        alignItems : 'stretch' ,
-        flexDirection : 'row' ,
-        textAlign : 'center' ,
-        fontSize :30 ,
-        color : 'white' ,
-        textAlignVertical : 'center' ,
-        opacity : 0.75 ,
-        
-    } ,
+    
+    backdrop: {
+        flexDirection: "column",
+        alignItems: "center",
+        width: 415,
+        height: 100,
+      },
+      zipItem: {
+        flex: 1,
+        flexDirection: "row",
+        justifyContent: "space-between",
+      },
+      layout: {
+        alignItems: "stretch",
+      },
+      zipPlace: {
+        flex: 1,
+      },
+      zipCode: {
+        flex: 1,
+      },
    });
    
