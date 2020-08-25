@@ -14,11 +14,13 @@ export default function App() {
         <Stack.Screen
           name="Home"
           component={zipCodeScreen}
+          options={{ headerStyle: { backgroundColor: "#d979f7" } }}
           
         />
         <Stack.Screen
           name="Weather"
           component={WeatherScreen}
+          options={{ headerStyle: { backgroundColor: "#dc8cf5" } }}
          
         />
       </Stack.Navigator>

@@ -19,13 +19,13 @@ const availableZipItems = [
 >
     <View style={styles.layout}>
       <ImageBackground source={pic} style={styles.backdrop}></ImageBackground>
-      <Text style={{ textAlign: "center"}}>
+      <Text style={{ textAlign: "center", backgroundColor: "#ed5175" }}>
         {place}
       </Text>
-      <Text style={{ textAlign: "center" }}>
+      <Text style={{ textAlign: "center", backgroundColor: "#f26686" }}>
         {code}
       </Text>
-      <Text style={{ backgroundColor: "#FFFFFF" }}>{"\n"}</Text>
+      <Text style={{ backgroundColor: "#e8b3bf" }}>{"\n"}</Text>
     </View>
   </TouchableHighlight>
 );
